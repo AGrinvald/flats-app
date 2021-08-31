@@ -3,6 +3,9 @@ import React, { Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { requestApartments } from "../../redux/apartments/apartments.actions";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
 import "./apartments.scss";
 
 import ApartmentList from "../../components/apartment-list/apartment-list";
@@ -27,6 +30,15 @@ export default function Apartments() {
       <main>
         <section className="apartments">
           <div className="apartments__container">
+            <div>
+              <a
+                href="https://github.com/AGrinvald/flats-app"
+                className="apartments__link"
+              >
+                {" "}
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </div>
             <div className="apartments__title">The Apartments</div>
             <ApartmentList
               isLoading={isLoading}
